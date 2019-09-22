@@ -32,6 +32,23 @@ class MahaLap {
     }
     return sum % 100;
   }
+
+  static tamnaiWithTime(time) {
+    const randomNumber = Math.random();
+    if (time === "กลางวัน") {
+      if (randomNumber >= 0.5) {
+        return randomNumber;
+      } else {
+        return 0.5;
+      }
+    } else {
+      if (randomNumber <= 0.5) {
+        return randomNumber;
+      } else {
+        return 0.5;
+      }
+    }
+  }
 }
 
 module.exports = MahaLap;
