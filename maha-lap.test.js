@@ -48,4 +48,28 @@ describe("Test Maha-Lap", () => {
     const result = MahaLap.tamnaiWithDay("คริสมาสต์");
     expect(result).toEqual(25);
   });
+  test("Test Tamnai with story Snake", () => {
+    const result = MahaLap.tamnaiWithStory("งู");
+    expect(result).toEqual(3);
+  });
+
+  test("Test Tamnai with story Cat", () => {
+    const result = MahaLap.tamnaiWithStory("แมว");
+    expect(result).toEqual(6);
+  });
+
+  test("Test Tamnai with story exes", () => {
+    const result = MahaLap.tamnaiWithStory("แฟนเก่า");
+    expect(result).toEqual(28);
+  });
+
+  test("Test Tamnai with story special alphabet", () => {
+    const result = MahaLap.tamnaiWithStory("⊙▂⊙?");
+    expect(result).toEqual(10);
+  });
+
+  test("Test Tamnai with story 3 space bar", () => {
+    const result = MahaLap.tamnaiWithStory("   ");
+    expect(result).toEqual(6);
+  });
 });
